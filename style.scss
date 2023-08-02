@@ -1257,7 +1257,7 @@ $glb_px_border-radius: 15px;
 	}
 	&search { //OK Search Results
 		@include wrap_section_article;
-		@include post-header("'", "'�쓽 寃��깋寃곌낵");
+		@include post-header("'", "'");
 	}
 }
 .side-menu {
