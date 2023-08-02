@@ -275,13 +275,12 @@ $glb_px_border-radius: 15px;
 					display: none;
 					position: absolute;
 					z-index: 30;
-					width: 100px;
-					margin-left: -34px;
+					width: 80px;
+					margin-left: -25px;
 					padding-top: 10px;
 
 					> ul > li > a {
 						display: block;
-						border: 1px solid lighten($glb_color_lightgray, 10%);
 						background-color: $glb_color_white;
 						text-align: center;
 						font-size: 0.875em;
