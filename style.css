@@ -1079,13 +1079,9 @@
   margin: 10px 10px 20px 10px;
 }
 #wrap > aside .category ul li {
-  font-size: 0.875em;
   padding: 4px 0 5px;
   line-height: 1.25rem;
   color: #777;
-}
-#wrap > aside .category ul li a {
-  color: #555;
 }
 #wrap > aside .category ul li a:hover {
   color: #333;

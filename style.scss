@@ -1102,17 +1102,14 @@ $glb_px_border-radius: 15px;
 		//others
 		> * {margin: 10px 10px 20px 10px;}
 		.category ul li {
-			font-size: 0.875em;
 			padding: 4px 0 5px;
 			line-height: 1.25rem;
 			color: #777;
 
 			a {
-				color: #555;
-
 				&:hover {color: #333;}
 			}
-			ul {
+			ul { //#wrap > aside .category ul li ul li:nth-child(1):before
 				padding-top: 8px;
 
 				li {
