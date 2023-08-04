@@ -1,10 +1,10 @@
-name: Tidory
+name: tidory
 
 on:
   push:
-    branches: [ master ]
+    branches: [ tidory ]
   pull_request:
-    branches: [ master ]
+    branches: [ tidory ]
 
 jobs:
   build:
