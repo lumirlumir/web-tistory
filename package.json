@@ -1,13 +1,13 @@
 {
   "scripts": {
-    "start": "concurrently \"tidory start\" \"npm run sass:watch\"",
-    "preview": "concurrently \"tidory preview\" \"npm run sass:watch\"",
+    "start": "concurrently \"tidory start\" \"npm run sass:compile\" \"npm run sass:watch\"",
+    "preview": "concurrently \"tidory preview\" \"npm run sass:compile\" \"npm run sass:watch\"",
     "production": "tidory production",
     "store": "tidory store",
     "deploy": "tidory deploy",
     "lint": "eslint --ext .js --ignore-path .gitignore . && pug-lint .",
-    "sass:watch": "node-sass -w views/style.scss views/style.css --output-style expanded",
-    "sass:compile": "node-sass views/style.scss views/style.css --output-style expanded"
+    "sass:watch": "node-sass -w style/style.scss style/style.css --output-style expanded",
+    "sass:compile": "node-sass style/style.scss style/style.css --output-style expanded"
   },
   "license": "MIT",
   "repository": {

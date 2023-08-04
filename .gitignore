@@ -1,11 +1,15 @@
 # Modules
-node_modules
+node_modules/
 
 # Distribution
-dist
+dist/
 
 # Configuration
 tidory.config.js
 
-.idea
-.vscode
+# Style
+style/*.css
+
+# Etc
+.idea/
+.vscode/
