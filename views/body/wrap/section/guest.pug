@@ -1,0 +1,69 @@
+.
+    <s_guest>
+        <div class="comments">
+            <div class="post-header">
+                <h1>방명록</h1>
+            </div>
+
+            <s_guest_input_form>
+                <div class="comment-form">
+                    <s_guest_member>
+                        <div class="field">
+                            <s_guest_form>
+                                <input type="text" name="[##_guest_input_name_##]" placeholder="이름" value="[##_guest_name_##]">
+                                <input type="password" name="[##_guest_input_password_##]" placeholder="암호" value="[##_guest_password_##]">
+                            </s_guest_form>
+                        </div>
+                    </s_guest_member>
+                    <textarea name="[##_guest_textarea_body_##]" cols="" rows="4" placeholder="여러분의 소중한 댓글을 입력해주세요."></textarea>
+                    <div class="submit">
+                        <button type="submit" class="btn" onclick="[##_guest_onclick_submit_##]">등록</button>
+                    </div>
+                </div>
+            </s_guest_input_form>
+
+            <s_guest_container>
+                <div class="comment-list">
+                    <ul>
+                        <s_guest_rep>
+                            <li>
+                                <div class="author-meta">
+                                    <img src="//t1.daumcdn.net/tistory_admin/static/skin/avatar_default.gif" class="avatar" alt="프로필사진">
+                                    <span class="nickname">[##_guest_rep_name_##]</span>
+                                    <span class="date">[##_guest_rep_date_##]</span>
+                                    <span class="control">
+                                        <button type="button">더보기</button>
+                                        <div class="link">
+                                            <a href="#" onclick="[##_guest_rep_onclick_delete_##]">수정/삭제</a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <p>[##_guest_rep_desc_##]<br>
+                                <a href="#" class="reply" onclick="[##_guest_rep_onclick_reply_##]">답변</a></p>
+                                <s_guest_reply_container>
+                                    <ul>
+                                        <s_guest_reply_rep>
+                                            <li>
+                                                <div class="author-meta">
+                                                    <img src="//t1.daumcdn.net/tistory_admin/static/skin/avatar_default.gif" class="avatar" alt="프로필사진">
+                                                    <span class="nickname">[##_guest_rep_name_##]</span>
+                                                    <span class="date">[##_guest_rep_date_##]</span>
+                                                    <span class="control">
+                                                        <button type="button">더보기</button>
+                                                        <div class="link">
+                                                            <a href="#" onclick="[##_guest_rep_onclick_delete_##]">수정/삭제</a>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                                <p>[##_guest_rep_desc_##]</p>
+                                            </li>
+                                        </s_guest_reply_rep>
+                                    </ul>
+                                </s_guest_reply_container>
+                            </li>
+                        </s_guest_rep>
+                    </ul>
+                </div>
+            </s_guest_container>
+        </div>
+    </s_guest>

@@ -231,7 +231,7 @@ $glb_px_border-radius: 15px;
 	//grid
 	display: grid;
 	grid-template-columns: $wrap_px_sidebar_width minmax(0, auto);
-	grid-template-rows: $wrap_px_header_height minmax(calc(100vh - $wrap_px_header_height - $wrap_px_footer_height), auto) $wrap_px_footer_height;
+	grid-template-rows: $wrap_px_header_height minmax(calc(100vh - #{$wrap_px_header_height} - #{$wrap_px_footer_height}), auto) $wrap_px_footer_height;
 
 	/* Selector */
 	> header { //OK
@@ -263,7 +263,7 @@ $glb_px_border-radius: 15px;
 			> * {margin: 0 5px;}
 			> .menu > button{
 				display: none;
-				background: transparent url(./images/ico_package.png) no-repeat -136.8px 9.1px;
+				background: transparent url(../images/ico_package.png) no-repeat -136.8px 9.1px;
 				transform: rotateZ(90deg);
 			}
 			> .profile {
@@ -318,7 +318,7 @@ $glb_px_border-radius: 15px;
 					button {
 						position: absolute;
 						right: 0px;
-						background: $glb_color_white url(./images/ico_package.png) no-repeat -1px -1px;
+						background: $glb_color_white url(../images/ico_package.png) no-repeat -1px -1px;
 					}
 				}
 				&.on {
@@ -775,7 +775,7 @@ $glb_px_border-radius: 15px;
 				border: 1px solid $glb_color_lightgray;
 				border-radius: 50%;
 				text-indent: -999em;
-				background: url(./images/ico_package.png) no-repeat $_background-position-x -50px;
+				background: url(../images/ico_package.png) no-repeat $_background-position-x -50px;
 			}
 		
 			/* Property */
@@ -871,7 +871,7 @@ $glb_px_border-radius: 15px;
 							display: block;
 							width: 20px;
 							height: 20px;
-							background: url(./images/ico_package.png) no-repeat -141px 5px;
+							background: url(../images/ico_package.png) no-repeat -141px 5px;
 							text-indent: -999em;
 						}
 						.link {
@@ -1042,7 +1042,7 @@ $glb_px_border-radius: 15px;
 					}
 				}
 				input[type=checkbox]:checked+label:before {
-					background: url(./images/ico_package.png) no-repeat -47px 4px;
+					background: url(../images/ico_package.png) no-repeat -47px 4px;
 				}
 			}
 			.submit {
@@ -1168,7 +1168,7 @@ $glb_px_border-radius: 15px;
 
 	/* Selector */
 	> #page-top {
-		@include glb_icon {background: $glb_color_white url(./images/ico_package.png) no-repeat -100px -200px;}
+		@include glb_icon {background: $glb_color_white url(../images/ico_package.png) no-repeat -100px -200px;}
 		
 		&:hover {
 			background-color: $glb_color_darkgray;
@@ -1222,9 +1222,9 @@ $glb_px_border-radius: 15px;
 
 			/* Selector */
 			.post-cover {
-				width: calc(100vw - $wrap_px_sidebar_width - $sb_px_scrollbar);
-				top: calc((-1) * $wrap_px_header_height);
-				left: calc((-1) * 2 * $wrap_vw_header_margin);
+				width: calc(100vw - #{$wrap_px_sidebar_width} - #{$sb_px_scrollbar});
+				top: calc((-1) * #{$wrap_px_header_height});
+				left: calc((-1) * 2 * #{$wrap_vw_header_margin});
 			}
 			.post-item {
 				/* Property */
@@ -1312,7 +1312,7 @@ $glb_px_border-radius: 15px;
 	.pagination .next,
 	.comment-list ul li .author-meta .control button,
 	.comment-form .secret input[type=checkbox]:checked+label:before {
-		background-image: url(./images/ico_package_2x.png);
+		background-image: url(../images/ico_package_2x.png);
 		background-size: 200px auto;
 	}
 }

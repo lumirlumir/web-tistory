@@ -7,6 +7,9 @@ dist/
 # Configuration
 tidory.config.js
 
+# Views
+views/Head/google.pug
+
 # Style
 style/*.css
 

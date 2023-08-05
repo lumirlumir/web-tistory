@@ -2,15 +2,14 @@ doctype html
 html
   head
     //- html
-    include views/Head.pug
+    include views/head.pug
 
     //- css
     style 
       include style/style.css
 
     //- js
-    script 
+    script
       include javascript/javascript.js
 
-  body 
-    p hi~
+  include views/body.pug
