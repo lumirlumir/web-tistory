@@ -74,7 +74,7 @@ $glb_px_border-radius: 15px;
 	/* Selector */
 	&:hover {
 		box-shadow: 0 0 25px -10px $glb_color_darkgray;
-		transform: scale(1.01);		
+		transform: scale(1.01);
 		@content;
 	}
 }
@@ -167,7 +167,7 @@ $glb_px_border-radius: 15px;
 		scrollbar-color: $glb_color_lightgray $glb_color_white;
 	}
 	//Scroll Bar_Chrome, Edge, Safari
-	&::-webkit-scrollbar { 
+	&::-webkit-scrollbar {
 		& {
 			width: $sb_px_scrollbar;
 			height: $sb_px_scrollbar;
@@ -226,7 +226,7 @@ $glb_px_border-radius: 15px;
 	$wrap_vw_header_margin: 9vw !global;
 	$wrap_px_sidebar_width: 250px !global;
 	$wrap_px_footer_height: 40px !global;
-	
+
 	/* Property */
 	//grid
 	display: grid;
@@ -251,7 +251,7 @@ $glb_px_border-radius: 15px;
 		z-index: 500;
 		//design
 		background-color: $glb_color_white;
-		
+
 		/* Selector */
 		> * {
 			@include glb_flex;
@@ -263,7 +263,7 @@ $glb_px_border-radius: 15px;
 			> * {margin: 0 5px;}
 			> .menu > button{
 				display: none;
-				background: transparent url(../images/ico_package.png) no-repeat -136.8px 9.1px;
+				background: transparent url(./images/ico_package.png) no-repeat -136.8px 9.1px;
 				transform: rotateZ(90deg);
 			}
 			> .profile {
@@ -286,7 +286,7 @@ $glb_px_border-radius: 15px;
 						font-size: 0.875em;
 						line-height: 2rem;
 						color: $glb_color_darkgray;
-	
+
 						&:hover {background-color: lighten($glb_color_lightgray, 10%);}
 					}
 				}
@@ -296,7 +296,7 @@ $glb_px_border-radius: 15px;
 					position: relative;
 					width: 30px;
 					transition: width 1s;
-					
+
 					&:before {
 						content: "";
 						position: absolute;
@@ -312,18 +312,18 @@ $glb_px_border-radius: 15px;
 						font-size: 0.875em;
 						outline: none;
 						box-sizing: border-box;
-		
+
 						&::placeholder {color: $glb_color_lightgray}
 					}
 					button {
 						position: absolute;
 						right: 0px;
-						background: $glb_color_white url(../images/ico_package.png) no-repeat -1px -1px;
+						background: $glb_color_white url(./images/ico_package.png) no-repeat -1px -1px;
 					}
 				}
 				&.on {
 					width: 200px;
-	
+
 					&:before {content: none;}
 					input {
 						width: 100%;
@@ -347,7 +347,7 @@ $glb_px_border-radius: 15px;
 			&cover { //OK
 				/* Import */
 				@include glb_box-shadow;
-		
+
 				/* Property */
 				display: table;
 				width: 100%;
@@ -357,7 +357,7 @@ $glb_px_border-radius: 15px;
 				background-color: transparent;
 				background-position: 50%;
 				background-size: cover;
-			
+
 				/* Selector */
 				&:before {
 					content: "";
@@ -376,7 +376,7 @@ $glb_px_border-radius: 15px;
 					vertical-align: middle;
 					text-align: center;
 					color: $glb_color_white;
-		
+
 					/* Selector */
 					.category {
 						display: block;
@@ -394,15 +394,15 @@ $glb_px_border-radius: 15px;
 							background-color: $glb_color_white;
 							vertical-align: middle;
 						}
-				
+
 						/* Property */
 						display: block;
 						margin: 20px;
-				
+
 						/* Selector */
 						a {
 							color: $glb_color_white;
-		
+
 							&:before {
 								@include before;
 							}
@@ -416,19 +416,19 @@ $glb_px_border-radius: 15px;
 							}
 						}
 					}
-				}		
+				}
 			}
 			&header { //OK
 				/* Import */
 				@include glb_flex($_justify-content: center);
-		
+
 				/* Property */
 				margin: 20px 30%;
 				padding: 10px 0;
 				border-bottom: 3px double;
 				border-image: linear-gradient(to right, $glb_color_white, lighten($glb_color_lightgray, 10%), $glb_color_white);
 				border-image-slice: 1;
-			
+
 				/* Selector */
 				h1 {
 					em {
@@ -442,13 +442,13 @@ $glb_px_border-radius: 15px;
 				@include glb_box-shadow;
 				@include glb_hover1;
 				@include glb_hover2;
-		
+
 				/* Property */
 				margin: 30px 1vw;
 				width: 250px;
 				height: 300px;
 				overflow: hidden;
-		
+
 				/* Selector */
 				a {
 					/* Declaration */
@@ -461,7 +461,7 @@ $glb_px_border-radius: 15px;
 						text-align: center;
 						line-height: 1.5rem;
 					}
-		
+
 					/* Selector */
 					.thum {
 						/* Property */
@@ -472,18 +472,18 @@ $glb_px_border-radius: 15px;
 						margin-bottom: 5px;
 						background-color: lighten($glb_color_lightgray, 15%);
 						overflow: hidden;
-				
+
 						/* Selector */
 						img {width: inherit;}
 					}
 					.title {
 						@include common_property;
-		
+
 						white-space: nowrap;
 					}
 					.excerpt {
 						@include common_property;
-		
+
 						display: -webkit-box;
 						width: inherit;
 						height: 50px;
@@ -494,7 +494,7 @@ $glb_px_border-radius: 15px;
 					}
 					.meta {
 						@include common_property;
-		
+
 						font-size: 0.75em;
 						color: $glb_color_lightgray;
 					}
@@ -506,7 +506,7 @@ $glb_px_border-radius: 15px;
 			display: block;
 			margin: 20px 0;
 			text-align: center;
-		
+
 			/* Selector */
 			li {
 				line-height: 2;
@@ -553,7 +553,7 @@ $glb_px_border-radius: 15px;
 				font-size: 0.9375em;
 				line-height: 2;
 				color: #555;
-		
+
 				img {
 					max-width: 100%;
 					height: auto;
@@ -571,7 +571,7 @@ $glb_px_border-radius: 15px;
 				list-style: disc;
 				margin-bottom: 22px;
 				padding: revert;
-		
+
 				li {
 					position: relative;
 					margin-bottom: 10px;
@@ -584,7 +584,7 @@ $glb_px_border-radius: 15px;
 			ol {
 				list-style: decimal inside;
 				margin-bottom: 22px;
-		
+
 				li {
 					position: relative;
 					margin-bottom: 10px;
@@ -609,15 +609,15 @@ $glb_px_border-radius: 15px;
 					float: right;
 					margin: 0 0 22px 22px;
 				}
-			}	
+			}
 			blockquote {
 				margin-bottom: 40px;
 				padding: 16px 20px;
 				border-left: 4px solid #e6e6e6;
-		
+
 				p {
 					margin: 22px 0 0;
-		
+
 					&:first-child {
 						margin-top: 0;
 					}
@@ -632,7 +632,7 @@ $glb_px_border-radius: 15px;
 				font-size: 0.8em;
 				line-height: 1.5714;
 				color: #666;
-		
+
 				thead th {
 					font-size: 0.8em; /* modified */
 					padding:7px 0 11px;
@@ -661,7 +661,7 @@ $glb_px_border-radius: 15px;
 					padding: 120px 0 200px;
 					border-bottom: 1px solid #7a583a;
 					text-align: center;
-		
+
 					input {
 						width: 200px;
 						margin-bottom: 10px;
@@ -678,7 +678,7 @@ $glb_px_border-radius: 15px;
 				position: relative;
 				height: 0;
 				padding-bottom: 56.25%;
-		
+
 				iframe {
 					position: absolute;
 					top: 0;
@@ -692,7 +692,7 @@ $glb_px_border-radius: 15px;
 				width: 100%;
 				padding: 98px 0 120px;
 				text-align: center;
-		
+
 				h2 {
 					margin: 0 0 8px;
 					font-weight: 600;
@@ -713,7 +713,7 @@ $glb_px_border-radius: 15px;
 					border: 1px solid #eee;
 					font-size: 0.9125em;
 					line-height: 2.125rem;
-		
+
 					&:focus {
 						border-color: #484848;
 					}
@@ -727,7 +727,7 @@ $glb_px_border-radius: 15px;
 		.another_category { //Overwrite
 			margin: 60px 0 57px !important;
 			padding: 16px 20px 14px;
-	
+
 			h4 {
 				margin: 0 0 13px !important;;
 				padding: 0 !important;
@@ -741,7 +741,7 @@ $glb_px_border-radius: 15px;
 			th {
 				padding: 2px 0 !important;
 				font-size: 0.875rem !important;
-	
+
 				a.current {
 					text-decoration: underline !important;
 					font-weight: 400;
@@ -763,7 +763,7 @@ $glb_px_border-radius: 15px;
 			background-color: lighten($glb_color_lightgray, 0.15);
 			text-align: center;
 			vertical-align: middle;
-		
+
 			/* Selector */
 			&:hover {background-color: $glb_color_darkgray;}
 		}
@@ -775,13 +775,13 @@ $glb_px_border-radius: 15px;
 				border: 1px solid $glb_color_lightgray;
 				border-radius: 50%;
 				text-indent: -999em;
-				background: url(../images/ico_package.png) no-repeat $_background-position-x -50px;
+				background: url(./images/ico_package.png) no-repeat $_background-position-x -50px;
 			}
-		
+
 			/* Property */
 			margin: 50px 0;
 			text-align: center;
-		
+
 			/* Selector */
 			a {
 				display: inline-block;
@@ -794,12 +794,12 @@ $glb_px_border-radius: 15px;
 		}
 		.comments {
 			margin-bottom: 60px;
-		
+
 			h2 {
 				margin-bottom: 15px;
 				font-weight: 600;
 				font-size: 1em;
-		
+
 				.count{
 					margin-left: 4px;
 					color: #04beb8;
@@ -809,7 +809,7 @@ $glb_px_border-radius: 15px;
 		.comment-list {
 			margin-bottom: 60px;
 			border-top: 1px solid #eee;
-		
+
 			ul li {
 				display: inline-block;
 				width: 100%;
@@ -817,7 +817,7 @@ $glb_px_border-radius: 15px;
 				border-bottom: 1px solid #eee;
 				vertical-align: top;
 				box-sizing: border-box;
-		
+
 				.author-meta {
 					@mixin before {
 						content: "";
@@ -828,16 +828,16 @@ $glb_px_border-radius: 15px;
 						background-color: #e3e3e3;
 						vertical-align: middle;
 					}
-		
+
 					position: relative;
 					margin-bottom: 7px;
 					padding: 2px 0 0 60px;
 					font-size: 0.8125em;
 					color: #999;
-		
+
 					a {
 						color: #999;
-		
+
 						&:before {
 							@include before;
 						}
@@ -848,7 +848,7 @@ $glb_px_border-radius: 15px;
 					.nickname {
 						font-weight: 700;
 						color: #555;
-		
+
 						a {
 							color: #555;
 						}
@@ -865,13 +865,13 @@ $glb_px_border-radius: 15px;
 						top: 0;
 						right: -9px;
 						border-bottom: 0;
-		
+
 						button {
 							content: "";
 							display: block;
 							width: 20px;
 							height: 20px;
-							background: url(../images/ico_package.png) no-repeat -141px 5px;
+							background: url(./images/ico_package.png) no-repeat -141px 5px;
 							text-indent: -999em;
 						}
 						.link {
@@ -881,7 +881,7 @@ $glb_px_border-radius: 15px;
 							left: -65px;
 							width: 70px;
 							text-align: center;
-		
+
 							a {
 								display: block;
 								margin-top: -1px;
@@ -891,7 +891,7 @@ $glb_px_border-radius: 15px;
 								font-size: 0.875em;
 								line-height: 1.5rem;
 								color: #333;
-		
+
 								&:focus, &:hover {
 									background-color: #fafafa;
 									color: #222;
@@ -922,14 +922,14 @@ $glb_px_border-radius: 15px;
 					padding: 26px 0 21px;
 					border-top: 1px solid #eee;
 					background-color: #fafafa;
-		
+
 					li {
 						padding: 14px 0 15px 60px;
 						border-bottom: 0;
-		
+
 						.author-meta {
 							margin-bottom: 8px;
-		
+
 							.control {
 								right: 15px;
 							}
@@ -949,7 +949,7 @@ $glb_px_border-radius: 15px;
 						border-top: 0;
 						border-left: 0;
 						border-right: 0;
-		
+
 						&:first-child {
 							margin-top: -24px;
 							padding: 12px 0 11px;
@@ -969,7 +969,7 @@ $glb_px_border-radius: 15px;
 				text-align: center;
 				font-size: 0.875em;
 				color: #999;
-		
+
 				&:hover {
 					text-decoration: underline;
 				}
@@ -978,12 +978,12 @@ $glb_px_border-radius: 15px;
 		.comment-form {
 			position: relative;
 			margin-bottom: 60px;
-		
+
 			.field {
 				overflow: hidden;
 				margin-bottom: -1px;
 				border: 1px solid #eee;
-		
+
 				input {
 					&[type=text], &[type=password] {
 						float: left;
@@ -1018,7 +1018,7 @@ $glb_px_border-radius: 15px;
 				position: absolute;
 				left: 0;
 				bottom: 8px;
-		
+
 				input {
 					display: none;
 				}
@@ -1029,7 +1029,7 @@ $glb_px_border-radius: 15px;
 					color: #666;
 					outline: none;
 					cursor: pointer;
-		
+
 					&:before {
 						content: "";
 						display: inline-block;
@@ -1042,16 +1042,16 @@ $glb_px_border-radius: 15px;
 					}
 				}
 				input[type=checkbox]:checked+label:before {
-					background: url(../images/ico_package.png) no-repeat -47px 4px;
+					background: url(./images/ico_package.png) no-repeat -47px 4px;
 				}
 			}
 			.submit {
 				text-align: right;
-		
+
 				button {
 					background-color: #333;
 					color: #fff;
-		
+
 					&:hover, &:focus {
 						background-color: #04beb8;
 					}
@@ -1065,7 +1065,7 @@ $glb_px_border-radius: 15px;
 			font-size: 1em !important;
 			line-height: 1.75;
 			color: #999 !important;
-		
+
 			&:before {
 				content: "Not Found.";
 				display: block;
@@ -1153,7 +1153,7 @@ $glb_px_border-radius: 15px;
 
 		/* Property */
 		grid: {row: 3/4; column: 1/3;}
-		padding: 0 30px; 
+		padding: 0 30px;
 	}
 }
 #tool { //OK
@@ -1168,8 +1168,8 @@ $glb_px_border-radius: 15px;
 
 	/* Selector */
 	> #page-top {
-		@include glb_icon {background: $glb_color_white url(../images/ico_package.png) no-repeat -100px -200px;}
-		
+		@include glb_icon {background: $glb_color_white url(./images/ico_package.png) no-repeat -100px -200px;}
+
 		&:hover {
 			background-color: $glb_color_darkgray;
 			background-position-x: -150px;
@@ -1308,11 +1308,11 @@ $glb_px_border-radius: 15px;
 	header .util .search:before,
 	header .util .search button,
 	#tool .page-top,
-	.pagination .prev, 
+	.pagination .prev,
 	.pagination .next,
 	.comment-list ul li .author-meta .control button,
 	.comment-form .secret input[type=checkbox]:checked+label:before {
-		background-image: url(../images/ico_package_2x.png);
+		background-image: url(./images/ico_package_2x.png);
 		background-size: 200px auto;
 	}
 }
@@ -1352,10 +1352,10 @@ $glb_px_border-radius: 15px;
 	padding-left: 15px;
 }
 .entry-content pre code.hljs {
-	padding: 10px; margin: 15px 0; max-width: 100%; overflow-x: auto; overflow-y: hidden;  border-radius: 9px; line-height: 140%;
+    padding: 10px; margin: 15px 0; max-width: 100%; overflow-x: auto; overflow-y: hidden;  border-radius: 9px; line-height: 140%;
 }
 pre>code {
-	font-family: $glb_font_NGC !important; 
+	font-family: $glb_font_NGC !important;
 	font-size: 12px !important;
 	td {color: $glb_color_white !important;}
 }
