@@ -12,7 +12,3 @@ views/Head/google.pug
 
 # Style
 style/*.css
-
-# Etc
-.idea/
-.vscode/
