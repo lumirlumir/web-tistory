@@ -11,6 +11,6 @@
  *
  * after import assets it will be contained in app.js
  */
-import Alpine from 'alpinejs'
+import Alpine from 'alpinejs';
 
-window.Alpine = Alpine
+window.Alpine = Alpine;

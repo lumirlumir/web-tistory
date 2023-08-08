@@ -44,7 +44,7 @@
 // 		if ( window.T && window.T.config.USER.name ){
 // 			$profile.find(".login").hide();
 // 			$profile.find(".logout").show();
-// 		} 
+// 		}
 // 		else {
 // 			$profile.find(".login").show();
 // 			$profile.find(".logout").hide();
