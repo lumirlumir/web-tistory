@@ -1,3 +1,11 @@
+/* window - Set Property - scrollY progress */
+window.addEventListener('scroll', function () {
+  document.documentElement.style.setProperty(
+    '--scroll_ratio',
+    window.scrollY / (document.body.scrollHeight - window.innerHeight),
+  );
+});
+
 // (function($) {
 // 	function common(){
 // 		/* Declaration */
