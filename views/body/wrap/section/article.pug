@@ -1,28 +1,21 @@
 article
   s_article_protected
     s_index_article_rep
-      .
-        <div class="post-item">
-          <a href="[##_article_rep_link_##]">
-            <span class="thum"></span>
-            <span class="title">[##_article_rep_title_##]</span>
-            <span class="excerpt">보호되어 있는 글 입니다.</span>
-            <span class="meta">
-              <span class="date">[##_article_rep_simple_date_##]</span>
-            </span>
-          </a>
-        </div>
+      .post-item
+        a(href="[##_article_rep_link_##]")
+          span.thum
+          span.title [##_article_rep_title_##]
+          span.excerpt 보호되어 있는 글 입니다.
+          span.meta
+            span.date [##_article_rep_simple_date_##]
 
     s_permalink_article_rep
-      .
-        <div class="entry-content">
-          <form class="protected_form" onsubmit="{reloadEntry(14);return false;}">
-            <h2>보호되어 있는 글입니다.</h2>
-            <p>내용을 보시려면 비밀번호를 입력하세요.</p>
-            <input type="password" id="entry14password" name="entry14password" value="" placeholder="비밀번호">
-            <button type="submit" class="btn">확인</button>
-          </form>
-        </div>
+      .entry-content
+        form(class="protected_form" onsubmit="{reloadEntry(14);return false;}")
+          h2 보호되어 있는 글입니다.
+          p 내용을 보시려면 비밀번호를 입력하세요.
+          input(type="password" id="entry14password" name="entry14password" value="" placeholder="비밀번호")
+          button(type="submit" class="btn") 확인
 
   s_article_rep
     s_index_article_rep
