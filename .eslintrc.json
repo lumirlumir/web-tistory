@@ -11,7 +11,7 @@
     "node": true
   },
   "parserOptions": {
-    "ecmaVersion": 13,
+    "ecmaVersion": 14,
     "sourceType": "module"
   },
   "ignorePatterns": ["dist/", "legacy/"]

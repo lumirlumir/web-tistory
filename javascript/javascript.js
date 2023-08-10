@@ -1,99 +1,104 @@
-/* window - Set Property - scrollY progress */
-window.addEventListener('scroll', function () {
+/* Variables */
+const body = document.querySelector('body');
+const header = document.querySelector('#wrap header');
+const menu = document.querySelector('#wrap header .util .menu');
+const profile = document.querySelector('#wrap header .util .profile');
+const search = document.querySelector('#wrap header .util .search');
+const bodyClass = body.classList;
+const searchClass = search.classList;
+
+/* Event */
+// window - setProperty - scrollY progress
+window.addEventListener('scroll', () => {
   document.documentElement.style.setProperty(
-    '--scroll_ratio',
-    window.scrollY / (document.body.scrollHeight - window.innerHeight),
+    '--scrollRatio',
+    (
+      window.scrollY /
+      (document.body.scrollHeight - window.innerHeight)
+    ).toFixed(4),
   );
 });
 
-// (function($) {
-// 	function common(){
-// 		/* Declaration */
-// 		var $header = $("header"),
-// 			$menu = $header.find(".menu"),
-// 			$profile = $header.find(".profile"),
-// 			$search = $header.find(".search");
+// window - Media Query
+function sideMenu() {
+  if (window.innerWidth > 1366) {
+    bodyClass.add('sideMenu');
+  } else {
+    bodyClass.remove('sideMenu');
+  }
+}
+window.addEventListener('resize', sideMenu);
+document.addEventListener('DOMContentLoaded', sideMenu);
 
-// 		/* window - Set Property - scrollY progress */
-// 		$(window).on("scroll", function() {
-// 			document.documentElement.style.setProperty('--scroll_ratio', window.scrollY / (document.body.scrollHeight - window.innerHeight));
-// 		});
+// #wrap header
+header.addEventListener('mouseleave', () => {
+  searchClass.remove('on');
+});
 
-// 		/* window - Media Query */
-// 		$.sidemenu = function () {
-// 			($(window).width() > 1366) ? $("body").addClass("side-menu") : $("body").removeClass("side-menu");
-// 		}
-// 		$(document).ready($.sidemenu);
-// 		$(window).resize($.sidemenu);
+// #wrap header .util .menu
+menu.addEventListener('click', () => {
+  if (bodyClass.contains('sideMenu')) {
+    bodyClass.remove('sideMenu');
+  } else {
+    bodyClass.add('sideMenu');
+  }
+});
 
-// 		/* #wrap header */
-// 		$header.on("mouseleave", function() {
-// 			$search.removeClass("on");
-// 		});
+// #wrap header .util .profile
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.T && window.T.config.USER.name) {
+    profile.querySelector('.login').style.display = 'none';
+    profile.querySelector('.logout').style.display = 'block';
+  } else {
+    profile.querySelector('.login').style.display = 'block';
+    profile.querySelector('.logout').style.display = 'none';
+  }
+});
+profile.addEventListener('click', () => {
+  if (getComputedStyle(profile.querySelector('nav')).display === 'none') {
+    profile.querySelector('nav').style.display = 'block';
+  } else {
+    profile.querySelector('nav').style.display = 'none';
+  }
+});
+profile.addEventListener('mouseleave', () => {
+  profile.querySelector('nav').style.display = 'none';
+});
+profile.querySelector('.login').addEventListener('click', () => {
+  document.location.href = `https://www.tistory.com/auth/login?redirectUrl=${encodeURIComponent(
+    window.TistoryBlog.url,
+  )}`;
+});
+profile.querySelector('.logout').addEventListener('click', () => {
+  document.location.href = `https://www.tistory.com/auth/logout?redirectUrl=${encodeURIComponent(
+    window.TistoryBlog.url,
+  )}`;
+});
 
-// 		/* #wrap header .util .menu */
-// 		$menu.on("click", function(){
-// 			$("body").hasClass("side-menu") ? $("body").removeClass("side-menu") : $("body").addClass("side-menu");
-// 		});
+// #wrap header .util .search
+search.addEventListener('click', () => {
+  if (!searchClass.contains('on')) {
+    searchClass.add('on');
+    search.querySelector('input').focus();
+  }
+});
 
-// 		/* #wrap header .util .profile */
-// 		$profile.on("click", "button", function(){
-// 			$(this).siblings("nav").is(":hidden") ? $(this).siblings("nav").show() : $(this).siblings("nav").hide();
-// 		});
-// 		$profile.on("mouseleave", function(){
-// 			$(this).find("nav").hide();
-// 		});
-// 		$profile.on("click", ".login", function(){
-// 			document.location.href = 'https://www.tistory.com/auth/login?redirectUrl=' + encodeURIComponent(window.TistoryBlog.url);
-// 		});
-// 		$profile.on("click", ".logout", function(){
-// 			document.location.href = 'https://www.tistory.com/auth/logout?redirectUrl=' + encodeURIComponent(window.TistoryBlog.url);
-// 		});
-// 		if ( window.T && window.T.config.USER.name ){
-// 			$profile.find(".login").hide();
-// 			$profile.find(".logout").show();
-// 		}
-// 		else {
-// 			$profile.find(".login").show();
-// 			$profile.find(".logout").hide();
-// 		}
+// Keyup ESC
+document.addEventListener('keyup', e => {
+  if (e.key === 'Escape') {
+    searchClass.remove('on');
+    profile.querySelector('nav').style.display = 'none';
+    document
+      .querySelector('.comment-list ul li .author-meta .control .link')
+      .removeAttribute('style');
+  }
+});
 
-// 		/* #wrap header .util .search */
-// 		$search.on("click", function(){
-// 			if ( !$(this).hasClass("on") )
-// 				$(this).addClass("on").find("input").focus();
-// 		});
-
-// 		/* #tool #page-top */
-// 		$("#page-top").on('click', function(){
-// 			$('body, html').animate({ scrollTop: 0 }, 500 );
-// 		});
-
-// 		/* keyup esc */
-// 		$(document).on("keyup", function(e) {
-// 			if (e.which == 27){
-// 				$search.removeClass("on");
-// 				$profile.find("nav").hide();
-// 			}
-// 		});
-// 	}
-
-// 	function commentControl(){
-// 		$(document).on("click", ".comments .comment-list ul li .author-meta .control button", function(){
-// 			if ( $(this).siblings(".link").is(":hidden") ){
-// 				$(".comments .link").removeAttr("style");
-// 				$(this).siblings(".link").show();
-// 			} else {
-// 				$(this).siblings(".link").hide();
-// 			}
-// 		});
-
-// 		$(document).on("keyup", function(e){
-// 			if ( e.keyCode == '27' ){
-// 				$(".comment-list ul li .author-meta .control .link").removeAttr("style");
-// 			}
-// 		});
-// 	}
-
-// 	common(); commentControl(); // Execute
-// })(jQuery);
+// $(document).on("click", ".comments .comment-list ul li .author-meta .control button", function(){
+//   if ( $(this).siblings(".link").is(":hidden") ){
+//     $(".comments .link").removeAttr("style");
+//     $(this).siblings(".link").show();
+//   } else {
+//     $(this).siblings(".link").hide();
+//   }
+// });
