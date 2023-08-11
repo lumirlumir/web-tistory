@@ -56,7 +56,9 @@ window.addEventListener('load', () => {
 
   // body - click
   $('body').addEventListener('click', event => {
-    switch (event.target.id) {
+    const target = event.target.id;
+
+    switch (target) {
       case 'menu':
         $('body').classList.toggle('sideMenu');
         break;
@@ -69,11 +71,8 @@ window.addEventListener('load', () => {
         break;
 
       case 'login':
-        document.location.href = `https://www.tistory.com/auth/login?redirectUrl=${encodeURIComponent(window.TistoryBlog.url)}`;
-        break;
-
       case 'logout':
-        document.location.href = `https://www.tistory.com/auth/logout?redirectUrl=${encodeURIComponent(window.TistoryBlog.url)}`;
+        document.location.href = `https://www.tistory.com/auth/${target}?redirectUrl=${encodeURIComponent(window.TistoryBlog.url)}`;
         break;
 
       case 'search':

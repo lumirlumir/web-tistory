@@ -40,14 +40,7 @@ $glb_px_border-radius: 15px;
 
 /* 3_Global Mixin */
 //mixin_layout
-@mixin glb_flex(
-  $_display: flex,
-  $_flex: row,
-  $_flow: nowrap,
-  $_justify-content: space-between,
-  $_align-items: center,
-  $_align-content: space-between
-) {
+@mixin glb_flex($_display: flex, $_flex: row, $_flow: nowrap, $_justify-content: space-between, $_align-items: center, $_align-content: space-between) {
   display: $_display;
   flex-flow: $_flex $_flow;
   justify-content: $_justify-content;
@@ -101,13 +94,7 @@ $glb_px_border-radius: 15px;
 /* 1_Reset */ //OK
 :root {
   /* Declaration */
-  @mixin font(
-    $_font-family: inherit,
-    $_font-style: inherit,
-    $_font-weight: inherit,
-    $_font-size: 1em,
-    $_color: inherit
-  ) {
+  @mixin font($_font-family: inherit, $_font-style: inherit, $_font-weight: inherit, $_font-size: 1em, $_color: inherit) {
     font: {
       family: $_font-family;
       style: $_font-style;
@@ -126,13 +113,7 @@ $glb_px_border-radius: 15px;
     appearance: none;
   }
   body {
-    @include font(
-      $_font-family: $glb_font,
-      $_font-style: normal,
-      $_font-weight: normal,
-      $_font-size: 1.05em,
-      $_color: $glb_color_black
-    );
+    @include font($_font-family: $glb_font, $_font-style: normal, $_font-weight: normal, $_font-size: 1.05em, $_color: $glb_color_black);
   }
   h1 {
     @include font($_font-weight: bold, $_font-size: 2em);
@@ -271,10 +252,7 @@ $glb_px_border-radius: 15px;
   display: grid;
   grid-template-columns: $wrap_px_sidebar_width minmax(0, auto);
   grid-template-rows:
-    $wrap_px_header_height minmax(
-      calc(100vh - #{$wrap_px_header_height} - #{$wrap_px_footer_height}),
-      auto
-    )
+    $wrap_px_header_height minmax(calc(100vh - #{$wrap_px_header_height} - #{$wrap_px_footer_height}), auto)
     $wrap_px_footer_height;
 
   /* Selector */
@@ -315,8 +293,7 @@ $glb_px_border-radius: 15px;
       }
       > #menu > button {
         display: none;
-        background: transparent url(./images/ico_package.png) no-repeat -136.8px
-          9.1px;
+        background: transparent url(./images/ico_package.png) no-repeat -136.8px 9.1px;
         transform: rotateZ(90deg);
       }
       > #profile {
@@ -497,12 +474,7 @@ $glb_px_border-radius: 15px;
         margin: 20px 30%;
         padding: 10px 0;
         border-bottom: 3px double;
-        border-image: linear-gradient(
-          to right,
-          $glb_color_white,
-          lighten($glb_color_lightgray, 10%),
-          $glb_color_white
-        );
+        border-image: linear-gradient(to right, $glb_color_white, lighten($glb_color_lightgray, 10%), $glb_color_white);
         border-image-slice: 1;
 
         /* Selector */
@@ -863,8 +835,7 @@ $glb_px_border-radius: 15px;
         border: 1px solid $glb_color_lightgray;
         border-radius: 50%;
         text-indent: -999em;
-        background: url(./images/ico_package.png) no-repeat
-          $_background-position-x -50px;
+        background: url(./images/ico_package.png) no-repeat $_background-position-x -50px;
       }
 
       /* Property */
@@ -885,279 +856,6 @@ $glb_px_border-radius: 15px;
       }
       .selected {
         color: $glb_color_black;
-      }
-    }
-    .comments {
-      margin-bottom: 60px;
-
-      h2 {
-        margin-bottom: 15px;
-        font-weight: 600;
-        font-size: 1em;
-
-        .count {
-          margin-left: 4px;
-          color: #04beb8;
-        }
-      }
-    }
-    .comment-list {
-      margin-bottom: 60px;
-      border-top: 1px solid #eee;
-
-      ul li {
-        display: inline-block;
-        width: 100%;
-        padding: 32px 0 28px;
-        border-bottom: 1px solid #eee;
-        vertical-align: top;
-        box-sizing: border-box;
-
-        .author-meta {
-          @mixin before {
-            content: '';
-            display: inline-block;
-            width: 2px;
-            height: 2px;
-            margin: 0 7px 0 5px;
-            background-color: #e3e3e3;
-            vertical-align: middle;
-          }
-
-          position: relative;
-          margin-bottom: 7px;
-          padding: 2px 0 0 60px;
-          font-size: 0.8125em;
-          color: #999;
-
-          a {
-            color: #999;
-
-            &:before {
-              @include before;
-            }
-          }
-          span:before {
-            @include before;
-          }
-          .nickname {
-            font-weight: 700;
-            color: #555;
-
-            a {
-              color: #555;
-            }
-          }
-          .avatar {
-            float: left;
-            width: 46px;
-            margin: -2px 0 0 -60px;
-            border: 1px solid #eee;
-            border-radius: 50%;
-          }
-          .control {
-            position: absolute;
-            top: 0;
-            right: -9px;
-            border-bottom: 0;
-
-            button {
-              content: '';
-              display: block;
-              width: 20px;
-              height: 20px;
-              background: url(./images/ico_package.png) no-repeat -141px 5px;
-              text-indent: -999em;
-            }
-            .link {
-              display: none;
-              position: absolute;
-              top: 100%;
-              left: -65px;
-              width: 70px;
-              text-align: center;
-
-              a {
-                display: block;
-                margin-top: -1px;
-                border: 1px solid #e0e0e0;
-                background-color: #fff;
-                text-decoration: none;
-                font-size: 0.875em;
-                line-height: 1.5rem;
-                color: #333;
-
-                &:focus,
-                &:hover {
-                  background-color: #fafafa;
-                  color: #222;
-                }
-              }
-            }
-          }
-          .nickname:before,
-          .nickname a:before,
-          .control:before,
-          .control a:before {
-            content: none;
-          }
-        }
-        p {
-          max-width: 85%;
-          padding: 0 0 0 60px;
-          font-size: 0.875em;
-          line-height: 1.3125rem;
-          color: #777;
-          box-sizing: border-box;
-        }
-        .reply {
-          display: inline-block;
-          margin-top: 10px;
-          font-size: 0.8125rem;
-          color: #999;
-        }
-        ul {
-          margin: 28px 0 -32px 0;
-          padding: 26px 0 21px;
-          border-top: 1px solid #eee;
-          background-color: #fafafa;
-
-          li {
-            padding: 14px 0 15px 60px;
-            border-bottom: 0;
-
-            .author-meta {
-              margin-bottom: 8px;
-
-              .control {
-                right: 15px;
-              }
-              .avatar {
-                width: 42px;
-              }
-            }
-            p {
-              max-width: 80%;
-            }
-          }
-          .tt_more_preview_comments_wrap {
-            display: block;
-          }
-          .tt_more_preview_comments_text {
-            margin-bottom: 16px;
-            border-top: 0;
-            border-left: 0;
-            border-right: 0;
-
-            &:first-child {
-              margin-top: -24px;
-              padding: 12px 0 11px;
-            }
-          }
-        }
-      }
-      .tt_more_preview_comments_wrap {
-        padding: 0;
-        border: 0;
-      }
-      .tt_more_preview_comments_text {
-        display: block;
-        margin: -1px 0 0;
-        padding: 12px 0 11px;
-        border: 1px solid #eee;
-        text-align: center;
-        font-size: 0.875em;
-        color: #999;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-    .comment-form {
-      position: relative;
-      margin-bottom: 60px;
-
-      .field {
-        overflow: hidden;
-        margin-bottom: -1px;
-        border: 1px solid #eee;
-
-        input {
-          &[type='text'],
-          &[type='password'] {
-            float: left;
-            width: 50%;
-            padding: 12px 16px;
-            border: 0;
-            border-left: 1px solid #eee;
-            font-size: 0.875em;
-            color: #777;
-            box-sizing: border-box;
-          }
-          &:first-child {
-            border-left: 0;
-          }
-        }
-      }
-      textarea {
-        display: block;
-        width: 100%;
-        margin-bottom: 20px;
-        padding: 16px 100px 16px 16px;
-        border: 1px solid #eee;
-        font-size: 0.875em;
-        color: #777;
-        box-sizing: border-box;
-        resize: none;
-      }
-      input::-webkit-input-placeholder,
-      textarea::-webkit-input-placeholder {
-        color: #999;
-      }
-      .secret {
-        position: absolute;
-        left: 0;
-        bottom: 8px;
-
-        input {
-          display: none;
-        }
-        label {
-          display: inline-block;
-          font-size: 0.8125em;
-          line-height: 1.25rem;
-          color: #666;
-          outline: none;
-          cursor: pointer;
-
-          &:before {
-            content: '';
-            display: inline-block;
-            width: 19px;
-            height: 18px;
-            margin-right: 12px;
-            border: 1px solid #e1e1e1;
-            vertical-align: top;
-            background-color: #fff;
-          }
-        }
-        input[type='checkbox']:checked + label:before {
-          background: url(./images/ico_package.png) no-repeat -47px 4px;
-        }
-      }
-      .submit {
-        text-align: right;
-
-        button {
-          background-color: #333;
-          color: #fff;
-
-          &:hover,
-          &:focus {
-            background-color: #04beb8;
-          }
-        }
       }
     }
     .absent_post {
@@ -1183,11 +881,7 @@ $glb_px_border-radius: 15px;
   > aside {
     //Yet
     /* Import */
-    @include glb_flex(
-      $_flex: column,
-      $_justify-content: flex-start,
-      $_align-items: left
-    );
+    @include glb_flex($_flex: column, $_justify-content: flex-start, $_align-items: left);
     @include glb_box-shadow;
     @include glb_hover1;
 
