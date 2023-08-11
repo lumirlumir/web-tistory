@@ -1,11 +1,6 @@
 {
   "plugins": ["import", "prettier"],
-  "extends": [
-    "airbnb-base",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["airbnb-base", "plugin:import/errors", "plugin:import/warnings", "plugin:prettier/recommended"],
   "env": {
     "browser": true,
     "node": true
@@ -14,5 +9,8 @@
     "ecmaVersion": 14,
     "sourceType": "module"
   },
-  "ignorePatterns": ["dist/", "legacy/"]
+  "ignorePatterns": ["dist/", "legacy/"],
+  "rules": {
+    "prettier/prettier": ["error", { "printWidth": 250 }]
+  }
 }

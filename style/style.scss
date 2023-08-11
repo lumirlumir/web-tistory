@@ -313,13 +313,13 @@ $glb_px_border-radius: 15px;
       > * {
         margin: 0 5px;
       }
-      > .menu > button {
+      > #menu > button {
         display: none;
         background: transparent url(./images/ico_package.png) no-repeat -136.8px
           9.1px;
         transform: rotateZ(90deg);
       }
-      > .profile {
+      > #profile {
         img {
           width: 100%;
           height: 100%;
@@ -346,7 +346,7 @@ $glb_px_border-radius: 15px;
           }
         }
       }
-      > .search {
+      > #search {
         & {
           position: relative;
           width: 30px;
@@ -1465,8 +1465,8 @@ $glb_px_border-radius: 15px;
 /* 1_Retina Display and Other Displays */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
   //OK
-  header .util .search:before,
-  header .util .search button,
+  header .util #search:before,
+  header .util #search button,
   #tool .pageTop,
   .pagination .prev,
   .pagination .next,
@@ -1477,7 +1477,7 @@ $glb_px_border-radius: 15px;
   }
 }
 @media screen and (max-width: (1366px + $sb_px_scrollbar)) {
-  #wrap > header > .util > .menu > button {
+  #wrap > header > .util > #menu > button {
     display: block;
   }
 }
