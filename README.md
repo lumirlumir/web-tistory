@@ -1,33 +1,39 @@
-# Technology Stack
+# Required Technology Stack
 
-> 1-1. html
+> 1.VScode
 >
-> 1-2. pug
+> 2.Github
 >
-> 2-1. css
+> 3.Node.js
 >
-> 2-2. scss(sass)
+> 4.Tistory Skin Guide
 >
-> 3-1. javascript(vanilla js)
+> 5.Tidory Framework
 >
-> 4-1. node.js
+> 6.xml
+>
+> 7.html
+>
+> 8.pug
+>
+> 9.css
+>
+> 10.scss(sass)
+>
+> 11.javascript
+>
+> 12.React.js
+>
+> 13.pug-lint
+>
+> 14.eslint
+>
+> 15.prettier
+>
+> 16.editorconfig
+>
+> 17.webpack
 
-# Node Version
+# Node JS Version
 
 v18.17.0
-
-# .code-workspace
-
-```json
-"settings": {
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-}
-```
-
-# Bug
-
-> npm start 혹은 npm run preview 직후, 새로고침을 해야만 javascript가 반영된다.

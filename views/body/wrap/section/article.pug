@@ -20,63 +20,39 @@ article
   s_article_rep
     s_index_article_rep
       .post-item
-        .
-          <a href="[##_article_rep_link_##]">
-            <span class="thum">
-              <s_article_rep_thumbnail>
-                <img src="//i1.daumcdn.net/thumb/C300x300/?fname=[##_article_rep_thumbnail_raw_url_##]" alt="">
-              </s_article_rep_thumbnail>
-            </span>
-            <span class="title">[##_article_rep_title_##]</span>
-            <span class="excerpt">[##_article_rep_summary_##]</span>
-            <span class="meta">
-              <span class="date">[##_article_rep_simple_date_##]</span>
-            </span>
-          </a>
+        a(href="[##_article_rep_link_##]")
+          span.thum
+            s_article_rep_thumbnail
+              img(src="//i1.daumcdn.net/thumb/C300x300/?fname=[##_article_rep_thumbnail_raw_url_##]" alt="")
+          span.title [##_article_rep_title_##]
+          span.excerpt [##_article_rep_summary_##]
+          span.meta
+            span.date [##_article_rep_simple_date_##]
 
     s_permalink_article_rep
       //- <div class="post-cover" <s_article_rep_thumbnail> style="background-image:url([##_article_rep_thumbnail_raw_url_##])" </s_article_rep_thumbnail>>
       .post-cover(style="background-image:url([##_article_rep_thumbnail_raw_url_##])")
-        .
-          <div class="inner">
-            <span class="category">[##_article_rep_category_##]</span>
-            <h1>[##_article_rep_title_##]</h1>
-            <span class="meta">
-              <span class="author">by [##_article_rep_author_##]</span>
-              <span class="date">[##_article_rep_simple_date_##]</span>
-              <s_ad_div>
-                <a href="[##_s_ad_m_link_##]">수정</a>
-                <a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a>
-              </s_ad_div>
-            </span>
-          </div>
+        .inner
+          span.category [##_article_rep_category_##]
+          h1 [##_article_rep_title_##]
+          span.meta
+            span.author by [##_article_rep_author_##]
+            span.date [##_article_rep_simple_date_##]
+            s_ad_div
+              a(href="[##_s_ad_m_link_##]") 수정
+              a(href="#" onclick="[##_s_ad_d_onclick_##]") 삭제
 
-      .
-        <div class="entry-content">
-          [##_article_rep_desc_##]
-        </div>
+      .entry-content [##_article_rep_desc_##]
 
-      .
-        <s_tag_label>
-          <div class="tags">
-            [##_tag_label_rep_##]
-          </div>
-        </s_tag_label>
+      s_tag_label
+        .tags [##_tag_label_rep_##]
 
-      .
-        <s_article_related>
-          <div class="related-articles">
-            <s_article_related_rep>
-              <div class="post-item">
-                <a href="[##_article_related_rep_link_##]">
-                  <span class="thum">
-                    <s_article_related_rep_thumbnail>
-                      <img src="//i1.daumcdn.net/thumb/C176x120/?fname=[##_article_related_rep_thumbnail_link_##]" alt="">
-                    </s_article_related_rep_thumbnail>
-                  </span>
-                  <span class="title">[##_article_related_rep_title_##]</span>
-                </a>
-              </div>
-            </s_article_related_rep>
-          </div>
-        </s_article_related>
+      s_article_related
+        .related-articles
+          s_article_related_rep
+            .post-item
+              a(href="[##_article_related_rep_link_##]")
+                span.thum
+                  s_article_related_rep_thumbnail
+                    img(src="//i1.daumcdn.net/thumb/C176x120/?fname=[##_article_related_rep_thumbnail_link_##]" alt="")
+                span.title [##_article_related_rep_title_##]
