@@ -1,6 +1,6 @@
 {
   "plugins": ["import", "prettier"],
-  "extends": ["airbnb-base", "plugin:import/errors", "plugin:import/warnings", "plugin:prettier/recommended"],
+  "extends": ["airbnb", "airbnb/hooks", "plugin:import/errors", "plugin:import/warnings", "plugin:prettier/recommended", "plugin:eslint/recommended", "prettier"],
   "env": {
     "browser": true,
     "node": true
