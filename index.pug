@@ -12,8 +12,8 @@ html
     //- html
     include views/head.pug
 
-  //- include views/body.pug
-
-  body
-    #app
-    #appt
+  body(id="[##_body_id_##]")
+    s_t3
+      #app
+      #appt
+      include views/body.pug

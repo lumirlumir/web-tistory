@@ -16,8 +16,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from '../components/App';
-import Appt from '../components/Appt';
+import App from './components/App';
+import Appt from './components/Appt';
 
 ReactDOM.render(<App />, document.getElementById('app'));
 ReactDOM.render(<Appt />, document.getElementById('appt'));
