@@ -16,8 +16,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './components/App';
-import Appt from './components/Appt';
+import PageTop from './components/PageTop';
 
-ReactDOM.render(<App />, document.getElementById('app'));
-ReactDOM.render(<Appt />, document.getElementById('appt'));
+ReactDOM.render(<PageTop />, document.getElementById('PageTop'));

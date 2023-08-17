@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 /**
@@ -32,10 +33,13 @@ module.exports = {
   },
 
   /**
-   * Alias
+   * Build
    */
-  alias: {
-    '@': 'assets',
+  build: {
+    /**
+     * Assets public path
+     */
+    public_path: '',
   },
 
   /**
@@ -44,9 +48,13 @@ module.exports = {
    * @param {object} webpackConfig
    */
   extends(webpackConfig) {
-    return {
-      ...webpackConfig,
-      plugins: [new ESLintPlugin(), ...webpackConfig.plugins],
-    };
+    webpackConfig.plugins = [new ESLintPlugin(), ...webpackConfig.plugins];
+    webpackConfig.module.rules = [
+      {
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      ...webpackConfig.module.rules,
+    ];
   },
 };
