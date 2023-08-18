@@ -2,7 +2,18 @@ import React from 'react';
 import './PageTop.scss';
 
 function PageTop() {
-  return <h1>PageTop</h1>;
+  function scroll() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
+
+  return (
+    <button type="button" onClick={() => scroll()}>
+      PageTop
+    </button>
+  );
 }
 
 export default PageTop;

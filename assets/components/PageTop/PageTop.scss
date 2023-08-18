@@ -1,5 +1,11 @@
 #PageTop {
-  h1 {
-    color: red;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+
+  border: 1px solid red;
+
+  button {
+    border: 1px solid blue;
   }
 }
