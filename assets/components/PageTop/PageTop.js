@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaArrowUp } from 'react-icons/fa6';
 import './PageTop.scss';
 
 function PageTop() {
@@ -11,7 +12,7 @@ function PageTop() {
 
   return (
     <button type="button" onClick={() => scroll()}>
-      PageTop
+      <FaArrowUp color="gray" />
     </button>
   );
 }

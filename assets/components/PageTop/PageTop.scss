@@ -1,11 +1,20 @@
 #PageTop {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-
-  border: 1px solid red;
-
   button {
-    border: 1px solid blue;
+    /* Property */
+    //flex
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //design
+    width: 30px;
+    height: 30px;
+    border: 1px solid lighten(lightgray, 10%);
+    border-radius: 50%;
+    background-color: white;
+
+    /* Selector */
+    &:hover {
+      background-color: lighten(lightgray, 10%);
+    }
   }
 }

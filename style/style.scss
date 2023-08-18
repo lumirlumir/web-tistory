@@ -170,9 +170,6 @@ $glb_px_border-radius: 15px;
   /* Variables */
   $sb_px_scrollbar: 10px !global;
 
-  /* Properties */
-  scroll-behavior: smooth;
-
   /* Selector */
   //Scroll Bar_Firefox
   & {
@@ -970,7 +967,6 @@ $glb_px_border-radius: 15px;
   }
 }
 #tool {
-  //OK
   /* Import */
   @include glb_flex($_justify-content: flex-end);
 
@@ -979,18 +975,6 @@ $glb_px_border-radius: 15px;
   bottom: 60px; //for sticky position.
   padding: 0 60px;
   z-index: 500;
-
-  /* Selector */
-  > #pageTop {
-    @include glb_icon {
-      background: $glb_color_white url(./images/ico_package.png) no-repeat -100px -200px;
-    }
-
-    &:hover {
-      background-color: $glb_color_darkgray;
-      background-position-x: -150px;
-    }
-  }
 }
 
 /* 4_Body Type */
@@ -1160,7 +1144,6 @@ $glb_px_border-radius: 15px;
   //OK
   header .util #search:before,
   header .util #search button,
-  #tool .pageTop,
   .pagination .prev,
   .pagination .next,
   .comment-list ul li .author-meta .control button,

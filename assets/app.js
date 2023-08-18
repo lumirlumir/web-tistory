@@ -15,7 +15,6 @@
 /* React */
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import PageTop from './components/PageTop';
 
 ReactDOM.render(<PageTop />, document.getElementById('PageTop'));
