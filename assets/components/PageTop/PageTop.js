@@ -11,9 +11,11 @@ function PageTop() {
   }
 
   return (
-    <button type="button" onClick={() => scroll()}>
-      <FaArrowUp color="gray" />
-    </button>
+    <div className="PageTop">
+      <button type="button" onClick={() => scroll()}>
+        <FaArrowUp color="gray" />
+      </button>
+    </div>
   );
 }
 

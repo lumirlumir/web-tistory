@@ -1,4 +1,4 @@
-#PageTop {
+.PageTop {
   button {
     /* Property */
     //flex
@@ -11,6 +11,11 @@
     border: 1px solid lighten(lightgray, 10%);
     border-radius: 50%;
     background-color: white;
+    //position
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 500;
 
     /* Selector */
     &:hover {

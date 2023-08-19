@@ -36,11 +36,6 @@ window.addEventListener('load', () => {
     sideMenu();
   });
 
-  // window - scroll
-  window.addEventListener('scroll', () => {
-    $('html').style.setProperty('--scrollRatio', (window.scrollY / (document.body.scrollHeight - window.innerHeight)).toFixed(4));
-  });
-
   // document - keyup
   document.addEventListener('keyup', event => {
     switch (event.key) {

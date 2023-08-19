@@ -1,0 +1,37 @@
+.ProgBar {
+  /* Declaration */
+  //mixin
+  @mixin bgc_width($_bgc, $_width) {
+    background-color: $_bgc;
+    width: $_width;
+  }
+  //keyframes
+  @keyframes progress {
+    0% {
+      @include bgc_width(lighten(gray, 10%), 0%);
+    }
+    50% {
+      @include bgc_width(lighten(lightgray, 10%), 50%);
+    }
+    100% {
+      @include bgc_width(lighten(gray, 10%), 100%);
+    }
+  }
+
+  /* Property */
+  animation: {
+    delay: calc(var(--scrollRatio) * -1s);
+    duration: 1s;
+    fill-mode: both;
+    iteration-count: 1;
+    name: progress;
+    play-state: paused;
+    timing-function: ease-out;
+  }
+  //position
+  position: fixed;
+  height: 3px;
+  z-index: 500;
+  //design
+  border-radius: 15px;
+}
