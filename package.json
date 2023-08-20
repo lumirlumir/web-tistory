@@ -6,8 +6,8 @@
     "store": "tidory store",
     "deploy": "tidory deploy",
     "lint": "eslint --ext .js --ignore-path .gitignore . && pug-lint .",
-    "sass:watch": "node-sass -w style/style.scss style/style.css --output-style expanded",
-    "sass:compile": "node-sass style/style.scss style/style.css --output-style expanded"
+    "sass:watch": "node-sass -w style/body.scss style/body.css --output-style expanded",
+    "sass:compile": "node-sass style/body.scss style/body.css --output-style expanded"
   },
   "license": "LuMir",
   "repository": {
