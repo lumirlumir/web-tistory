@@ -6,17 +6,11 @@
 
 	[Selector]
  	1_Reset
-	2_Scroll Bar
- 	3_Layout
-	4_Body Type
- 	5_Component
+ 	2_Layout
+	3_Body Type
+ 	4_Component
 
 	[Media Screen]
-	1_Retina Display and Other Displays
-
-	[To Do List]
-	# Z-index
-	# Modularization
 */
 
 /* ------------------------ [Declaration] ------------------------ */ //OK
@@ -33,7 +27,7 @@ $glb_font: $glb_font_NBP, $glb_font_NGC;
 //color
 $glb_color_black: black;
 $glb_color_white: white;
-$glb_color_darkgray: #666666;
+$glb_color_darkgray: gray;
 $glb_color_lightgray: lightgray;
 //px
 $glb_px_border-radius: 15px;
@@ -91,8 +85,11 @@ $glb_px_border-radius: 15px;
 }
 
 /* ------------------------ [Selector] ------------------------ */
-/* 1_Reset */ //OK
+/* 1_Reset */
 :root {
+  /* Variables */
+  $sb_px_scrollbar: 10px !global;
+
   /* Declaration */
   @mixin font($_font-family: inherit, $_font-style: inherit, $_font-weight: inherit, $_font-size: 1em, $_color: inherit) {
     font: {
@@ -165,35 +162,7 @@ $glb_px_border-radius: 15px;
   }
 }
 
-/* 2_Scroll Bar */ //OK
-:root {
-  /* Variables */
-  $sb_px_scrollbar: 10px !global;
-
-  /* Selector */
-  //Scroll Bar_Firefox
-  & {
-    scrollbar-width: $sb_px_scrollbar;
-    scrollbar-color: $glb_color_lightgray $glb_color_white;
-  }
-  //Scroll Bar_Chrome, Edge, Safari
-  &::-webkit-scrollbar {
-    & {
-      width: $sb_px_scrollbar;
-      height: $sb_px_scrollbar;
-    }
-    &-track {
-      background: $glb_color_white;
-    }
-    &-thumb {
-      background-color: $glb_color_lightgray;
-      border-radius: $glb_px_border-radius;
-      border: 2px solid $glb_color_white;
-    }
-  }
-}
-
-/* 3_Layout */
+/* 2_Layout */
 #wrap {
   /* Declaration */
   //variables
@@ -926,18 +895,8 @@ $glb_px_border-radius: 15px;
     padding: 0 30px;
   }
 }
-#tool {
-  /* Import */
-  @include glb_flex($_justify-content: flex-end);
 
-  /* Property */
-  position: sticky;
-  bottom: 60px; //for sticky position.
-  padding: 0 60px;
-  z-index: 500;
-}
-
-/* 4_Body Type */
+/* 3_Body Type */
 #tt-body- {
   /* Declaration */
   @mixin wrap_section_article(
@@ -1069,7 +1028,7 @@ $glb_px_border-radius: 15px;
   }
 }
 
-/* 5_Component */
+/* 4_Component */
 .tags {
   //OK
   /* Import */
@@ -1099,7 +1058,6 @@ $glb_px_border-radius: 15px;
 }
 
 /* ------------------------ [Media Screen] ------------------------ */
-/* 1_Retina Display and Other Displays */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
   //OK
   header .util #search:before,

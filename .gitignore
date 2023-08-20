@@ -5,10 +5,7 @@ node_modules/
 dist/
 
 # Configuration
-tidory.config.js
-
-# Views
-views/Head/google.pug
+# tidory.config.js
 
 # Style
 style/*.css

@@ -1,5 +1,10 @@
 .ProgBar {
   /* Declaration */
+  //variables
+  $px_height: 3px;
+  $px_borderRadius: 15px;
+  $color_main: lighten(gray, 10%);
+  $color_sub: lightgray;
   //mixin
   @mixin bgc_width($_bgc, $_width) {
     background-color: $_bgc;
@@ -8,13 +13,13 @@
   //keyframes
   @keyframes progress {
     0% {
-      @include bgc_width(lighten(gray, 10%), 0%);
+      @include bgc_width($color_main, 0%);
     }
     50% {
-      @include bgc_width(lighten(lightgray, 10%), 50%);
+      @include bgc_width($color_sub, 50%);
     }
     100% {
-      @include bgc_width(lighten(gray, 10%), 100%);
+      @include bgc_width($color_main, 100%);
     }
   }
 
@@ -30,8 +35,8 @@
   }
   //position
   position: fixed;
-  height: 3px;
+  height: $px_height;
   z-index: 500;
   //design
-  border-radius: 15px;
+  border-radius: $px_borderRadius;
 }
