@@ -21,14 +21,6 @@ window.addEventListener('load', () => {
 
   /* Event Delegation Pattern */
   // window - load
-  if (window.T && window.T.config.USER.name) {
-    $('#login').style.display = 'none';
-    $('#logout').style.display = 'block';
-  } else {
-    $('#login').style.display = 'block';
-    $('#logout').style.display = 'none';
-  }
-
   sideMenu();
 
   // window - resize
@@ -41,7 +33,6 @@ window.addEventListener('load', () => {
     switch (event.key) {
       case 'Escape':
         $('#search').classList.remove('on');
-        $('#profile nav').style.display = 'none';
         break;
 
       default:
@@ -54,18 +45,6 @@ window.addEventListener('load', () => {
     const target = event.target.id;
 
     switch (target) {
-      case 'profile':
-        $('#profile nav').style.display = getComputedStyle($('#profile nav')).display === 'none' ? 'block' : 'none';
-        $('#profile').addEventListener('mouseleave', () => {
-          $('#profile nav').style.display = 'none';
-        });
-        break;
-
-      case 'login':
-      case 'logout':
-        document.location.href = `https://www.tistory.com/auth/${target}?redirectUrl=${encodeURIComponent(window.TistoryBlog.url)}`;
-        break;
-
       case 'search':
         $('#search').classList.toggle('on');
         $('#search input').focus();
