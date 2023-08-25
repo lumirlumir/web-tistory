@@ -1,4 +1,8 @@
-.PageTop {
+.ButtonSingle {
+  /* Property */
+  z-index: 500;
+
+  /* Selector */
   button {
     /* Declaration */
     $color_main: lighten(lightgray, 10%);
@@ -15,11 +19,6 @@
     border: 1px solid $color_main;
     border-radius: 50%;
     background-color: $color_sub;
-    //position
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-    z-index: 500;
 
     /* Selector */
     &:hover {

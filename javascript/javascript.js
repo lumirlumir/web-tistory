@@ -54,10 +54,6 @@ window.addEventListener('load', () => {
     const target = event.target.id;
 
     switch (target) {
-      case 'menu':
-        $('body').classList.toggle('sideMenu');
-        break;
-
       case 'profile':
         $('#profile nav').style.display = getComputedStyle($('#profile nav')).display === 'none' ? 'block' : 'none';
         $('#profile').addEventListener('mouseleave', () => {
