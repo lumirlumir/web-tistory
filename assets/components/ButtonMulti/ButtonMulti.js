@@ -7,17 +7,6 @@ function ButtonMulti(props) {
   // props
   const { children, title, position, top, right, bottom, left } = props;
 
-  // children
-  const childrenButtonSingle = [];
-  const childrenIcon = [];
-  React.Children.toArray(children).forEach(el => {
-    if (el.type.name === 'ButtonSingle') {
-      childrenButtonSingle.push(el);
-    } else {
-      childrenIcon.push(el);
-    }
-  });
-
   // state
   const [visible, setVisible] = useState(false);
 
@@ -35,10 +24,10 @@ function ButtonMulti(props) {
         bottom={bottom}
         left={left}
       >
-        {childrenIcon}
+        {children[0]}
       </ButtonSingle>
 
-      {visible && childrenButtonSingle}
+      {visible && children.slice(1)}
     </>
   );
 }
