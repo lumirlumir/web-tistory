@@ -45,19 +45,51 @@ ReactDOM.render(
     <ButtonMulti title="Links" position="fixed" right="120px" bottom="40px">
       <AiOutlineLink color="gray" size={19} />
 
-      <ButtonSingle click={() => {}} title="Github" position="fixed" right="120px" bottom="80px">
+      <ButtonSingle
+        click={() => {
+          window.open('https://github.com/');
+        }}
+        title="Github"
+        position="fixed"
+        right="120px"
+        bottom="80px"
+      >
         <AiOutlineGithub color="gray" size={18} />
       </ButtonSingle>
 
-      <ButtonSingle click={() => {}} title="Instagram" position="fixed" right="120px" bottom="120px">
+      <ButtonSingle
+        click={() => {
+          window.open('https://www.instagram.com/');
+        }}
+        title="Instagram"
+        position="fixed"
+        right="120px"
+        bottom="120px"
+      >
         <AiOutlineInstagram color="gray" size={19} />
       </ButtonSingle>
 
-      <ButtonSingle click={() => {}} title="Soundcloud" position="fixed" right="120px" bottom="160px">
+      <ButtonSingle
+        click={() => {
+          window.open('https://soundcloud.com/');
+        }}
+        title="Soundcloud"
+        position="fixed"
+        right="120px"
+        bottom="160px"
+      >
         <GrSoundcloud color="gray" size={17} />
       </ButtonSingle>
 
-      <ButtonSingle click={() => {}} title="Youtube" position="fixed" right="120px" bottom="200px">
+      <ButtonSingle
+        click={() => {
+          window.open('https://www.youtube.com/');
+        }}
+        title="Youtube"
+        position="fixed"
+        right="120px"
+        bottom="200px"
+      >
         <AiOutlineYoutube color="gray" size={18} />
       </ButtonSingle>
     </ButtonMulti>
