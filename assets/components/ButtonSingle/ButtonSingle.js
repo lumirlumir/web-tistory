@@ -1,10 +1,9 @@
 import React from 'react';
 import './ButtonSingle.scss';
 
-function PageTop(props) {
+function ButtonSingle(props) {
   /* Variables */
   const { children, click, title, position, top, right, bottom, left } = props;
-
   const style = { title, position, top, right, bottom, left };
 
   /* Return */
@@ -23,4 +22,4 @@ function PageTop(props) {
   );
 }
 
-export default PageTop;
+export default ButtonSingle;
