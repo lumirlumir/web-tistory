@@ -1,10 +1,7 @@
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
-  header .util #search:before,
-  header .util #search button,
+  header #search button,
   .pagination .prev,
-  .pagination .next,
-  .comment-list ul li .author-meta .control button,
-  .comment-form .secret input[type='checkbox']:checked + label:before {
+  .pagination .next {
     background-image: url(./images/ico_package_2x.png);
     background-size: 200px auto;
   }
