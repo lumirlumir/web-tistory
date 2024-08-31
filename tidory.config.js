@@ -6,8 +6,8 @@ const ESLintPlugin = require('eslint-webpack-plugin');
  * https://tidory.com/docs/configuration
  */
 module.exports = {
-  ts_session: 'e2797a8af93a8f8c347f3257a5c679cd1d9de03d',
-  url: 'https://lumir.tistory.com/',
+  ts_session: '',
+  url: '',
 
   preview: {
     /**
@@ -39,7 +39,7 @@ module.exports = {
     /**
      * Assets public path
      */
-    public_path: 'https://tistory1.daumcdn.net/tistory/5811831/skin/images',
+    public_path: '',
   },
 
   /**
